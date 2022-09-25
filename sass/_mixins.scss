@@ -1,0 +1,24 @@
+@use 'variables';
+
+@mixin modal-background {
+  background: variables.$Black-modal;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+@mixin button-gallery() {
+  background-color: variables.$White;
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 170px;
+  &:hover {
+    cursor: pointer;
+  }
+}

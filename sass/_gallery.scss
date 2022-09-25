@@ -1,0 +1,30 @@
+@use 'variables' as v;
+@use 'mixins' as mx;
+
+.gallery{
+  &__image-container{
+    border: 3px solid blue;
+    height: 300px;
+    width: 100%;
+    background-image: url('../images/image-product-1.jpg');
+    background-position-y: -35px;
+    background-size: cover;
+  }
+
+  &__previous{
+    @include mx.button-gallery;
+    left: 17px;
+  }
+
+  &__next{
+    @include mx.button-gallery;
+    right: 17px;
+  }
+
+  &__thumbnail{
+    display:none;
+    @media (min-width: 1115px){
+      display: block;
+    }
+  }
+}
