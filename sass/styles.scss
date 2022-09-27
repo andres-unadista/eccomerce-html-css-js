@@ -3,13 +3,27 @@
 @use 'navbar';
 @use 'modal-navbar';
 @use 'gallery';
+@use 'details';
+@use 'input';
+@use 'modal-cart';
+@use 'gallery-modal';
 
 .main-container{
   width: 375px;
-  border: 1px solid brown;
   margin: auto;
   position: relative;
   @media (min-width: 1115px){
-    width: 1115px;
+    width: 1215px;
+  }
+}
+
+.content{
+  @media (min-width: 1115px){
+    padding-top: 60px;
+    
+    display: flex;
+    justify-content: center;
+    gap: 125px;
+
   }
 }

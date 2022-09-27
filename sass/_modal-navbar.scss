@@ -3,6 +3,7 @@
 
 .modal-navbar{
   &__background{
+    display: none;
     @include mx.modal-background;
   }
   background-color: v.$White;

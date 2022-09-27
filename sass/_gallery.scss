@@ -1,9 +1,12 @@
 @use 'variables' as v;
 @use 'mixins' as mx;
 
+.content{
+  margin-bottom: 20px;
+}
+
 .gallery{
   &__image-container{
-    border: 3px solid blue;
     height: 300px;
     width: 100%;
     background-image: url('../images/image-product-1.jpg');
@@ -12,19 +15,41 @@
   }
 
   &__previous{
-    @include mx.button-gallery;
-    left: 17px;
+    @include mx.button-gallery(187px, 17px, false);
   }
 
   &__next{
-    @include mx.button-gallery;
-    right: 17px;
+    @include mx.button-gallery(187px, 320px, false);
+  }
+
+  &__thumbnails{
+    display:none;
+    @media (min-width: 1115px){
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__thumbnail{
-    display:none;
+    width: 90px;
+    border-radius: 16px;
+
     @media (min-width: 1115px){
-      display: block;
+      &:hover{
+        cursor: pointer;
+        border: 2px solid v.$Orange;
+
+      }
+    }
+  }
+
+  @media (min-width: 1115px){
+    width: 446px;
+    &__image-container{
+      background-position-y: 0px;
+      height: 446px;
+      margin-bottom: 33px;
+      border-radius: 15px;
     }
   }
 }

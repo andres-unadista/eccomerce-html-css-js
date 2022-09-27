@@ -1,0 +1,62 @@
+@use 'variables' as v;
+@use 'mixins' as mx;
+
+.modal-gallery {
+  padding-top: 20px;
+  width: 546px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+  &__background {
+    @include mx.modal-background;
+    display: none;
+    // display: grid;
+    place-content: center;
+  }
+
+  &__close{
+    width: 16px;
+    padding: 17px 0;
+    align-self: flex-end;
+    justify-self: center;
+    &:hover{
+      content: url('../images/icon-close-orange.svg');
+      cursor:pointer;
+    }
+  }
+
+  &__image-container {
+    background-image: url('../images/image-product-1.jpg');
+    height: 446px;
+    background-size: cover;
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
+
+
+  &__thumbnails {
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    margin: auto;
+  }
+
+  &__thumbnail {
+    width: 90px;
+    border-radius: 16px;
+
+    &:hover {
+      cursor: pointer;
+      border: 2px solid v.$Orange;
+    }
+  }
+
+  &__previous {
+    @include mx.button-gallery(257px, -15px, true);
+  }
+
+  &__next {
+    @include mx.button-gallery(257px, 525px, true);
+  }
+}
