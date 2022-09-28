@@ -22,6 +22,8 @@
     }
   </style>
   <link rel="stylesheet" href="main.css">
+
+  <script src="./main.js" defer></script>
 </head>
 
 <body>
@@ -58,7 +60,7 @@
 
       <div class="header__cart-avatar">
         <div class="header__cart">
-          <div class="header__cart--notification">4</div>
+          <div class="header__cart--notification">0</div>
           <img src="./images/icon-cart.svg" alt="cart" />
         </div>
         <img class="header__avatar" src="./images/image-avatar.png" alt="avatar" />
@@ -67,7 +69,7 @@
 
     <section class="content">
       <article class="gallery">
-        <div class="gallery__image-container">
+        <div class="gallery__image-container" data-id="1">
           <img src="./images/icon-previous.svg" alt="previous" class="gallery__previous" />
           <img src="./images/icon-next.svg" alt="next" class="gallery__next" />
         </div>
@@ -86,7 +88,7 @@
           companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
         </p>
         <div class="details__prices">
-          <p class="details__now">$125.00 <span class="details__discount">50%</span></p>
+          <p class="details__now"><span class="price" data-price="125.00" id="detail-price">$125.00</span> <span class="details__discount">50%</span></p>
           <p class="details__before">$250.00</p>
         </div>
         <div class="details__product-quantity">
@@ -104,7 +106,7 @@
     <div class="cart-modal">
       <h3 class="cart-modal__title">Cart</h3>
       <div class="cart-modal__checkout-container">
-        <div class="cart-modal__details">
+        <div class="cart-modal__details hide">
           <img class="cart-modal__thumb" src="./images/image-product-1-thumbnail.jpg" alt="product" />
           <div>
             <p class="cart-modal__product">Autumn Limited Edition...</p>
@@ -121,7 +123,7 @@
     <div class="modal-gallery__background">
       <article class="modal-gallery">
         <img src="./images/icon-close-white.svg" class="modal-gallery__close" alt="close modal">
-        <div class="modal-gallery__image-container">
+        <div class="modal-gallery__image-container" data-id="1">
           <img src="./images/icon-previous.svg" alt="previous" class="modal-gallery__previous" />
           <img src="./images/icon-next.svg" alt="next" class="modal-gallery__next" />
         </div>

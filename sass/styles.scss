@@ -13,7 +13,7 @@
   margin: auto;
   position: relative;
   @media (min-width: 1115px){
-    width: 1215px;
+    width: 100%;
   }
 }
 
@@ -27,3 +27,16 @@
 
   }
 }
+
+.show{
+  display: block;
+}
+
+.grid{
+  display: grid;
+}
+
+.hide{
+  display: none;
+}
+

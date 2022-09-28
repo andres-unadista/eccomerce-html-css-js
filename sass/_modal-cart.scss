@@ -1,11 +1,10 @@
 @use 'variables' as v;
 @use 'mixins' as mx;
 
-
-.cart-modal{
-  display:none;
+.cart-modal {
+  display: none;
   width: 360px;
-  height: 260px;
+  min-height: 260px;
   border-radius: 8px;
   position: absolute;
   top: 77px;
@@ -13,17 +12,17 @@
   right: 6px;
   box-shadow: 3px 2px 10px gray;
 
-  &__title{
+  &__title {
     font-weight: 700;
     padding: 24px;
     border-bottom: 1px solid v.$Grayish-blue;
   }
 
-  &__checkout-container{
+  &__checkout-container {
     padding: 24px;
   }
 
-  &__details{
+  &__details {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,21 +30,30 @@
     color: v.$Dark-grayish-blue;
   }
 
-  &__price span{
+  &__notification {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: v.$Dark-grayish-blue;
+  }
+
+  &__price span {
     color: v.$Black;
     font-weight: 700;
   }
-  
-  &__thumb{
+
+  &__thumb {
     width: 50px;
     border-radius: 4px;
   }
 
-  &__delete:hover{
+  &__delete:hover {
     cursor: pointer;
   }
 
-  &__check{
+  &__check {
     @include mx.buttonCart;
   }
 }
